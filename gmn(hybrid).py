@@ -50,7 +50,23 @@ class SQLSimilarityTrainer:
 # === SQL TO HYBRID AST ===
 class SQLToHybridAST:
     init():
-        mapping = {"Select": "π", "Join": "⨝", ...}
+        mapping ={
+            "Select": "π",      # Projection
+            "Join": "⨝",        # Join
+            "InnerJoin": "⨝",   # Explicit inner join
+            "LeftJoin": "⟕",    # Left outer join
+            "RightJoin": "⟖",   # Right outer join
+            "FullJoin": "⟗",   # Full outer join
+            "Where": "σ",       # Selection (WHERE clause)
+            "Group": "γ",       # GroupBy
+            "Order": "τ",       # Sort
+            "Limit": "λ",       # Limit
+            "Union": "∪",       # Union
+            "Except": "−",      # Set difference
+            "Alias": "α",       # Rename
+            "Table": "T",       # Table reference
+            "Subquery": "S",    # Subquery
+        }
 
     function parse_sql_to_hybrid_ast(sql):
         parse SQL using sqlglot → call _convert_node
