@@ -112,8 +112,29 @@ class HybridGNN(nn.Module):
         return pooled
 
 # === METRIC COMPUTATION ===
-function compute_metrics(preds, labels):
-    roc_auc = compute if binary
-    pearson = correlation(preds, labels)
-    spearman = correlation(preds, labels)
-    return dict of metrics
+from scipy.stats import pearsonr, spearmanr
+from sklearn.metrics import roc_auc_score
+
+def compute_metrics(preds, labels):
+    """Computes core metrics for SQL similarity evaluation.
+    
+    Args:
+        preds: List/array of predicted similarity scores (0-1)
+        labels: List/array of ground truth similarity scores (0-1)
+    
+    Returns:
+        Dictionary with:
+        - roc_auc: Area under ROC curve (if binary labels)
+        - pearson: Pearson correlation coefficient
+        - spearman: Spearman rank correlation
+    """
+    metrics = {
+        'pearson': pearsonr(labels, preds)[0],
+        'spearman': spearmanr(labels, preds)[0]
+    }
+    
+    # Only compute ROC if labels are binary
+    if len(set(labels)) == 2:
+        metrics['roc_auc'] = roc_auc_score(labels, preds)
+    
+    return metrics
