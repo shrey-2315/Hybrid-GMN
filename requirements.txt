@@ -1,0 +1,22 @@
+# Core SQL parsing and AST tools
+sqlglot==18.6.3
+zss==1.2.0
+
+# Graph neural networks
+torch>=2.0.0
+torch-geometric>=2.4.0
+networkx
+
+# Data handling and utilities
+pandas
+openpyxl
+numpy
+scikit-learn
+seaborn
+
+# Optional: Google Gemini (Generative AI API)
+google-generativeai
+
+# Logging and visualization
+tqdm
+matplotlib
