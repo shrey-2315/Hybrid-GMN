@@ -1,4 +1,4 @@
-#  Hybrid SQL Intelligence Pipeline
+# Structural SQL Similarity via Hybrid Graph Matching and AST-Guided Tree Edit Metrics
 
 This repository combines two powerful modules for advanced SQL understanding and transformation:
 
