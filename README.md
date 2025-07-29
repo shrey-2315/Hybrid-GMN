@@ -26,7 +26,7 @@ Uses `sqlglot` to convert SQL queries into ASTs, applies normalization rules, an
 
 ### 2. Graph Matching Network (GMN) Hybrid
 
-Uses hybrid ASTs and relational operator mapping to generate graph structures for GNN-based similarity comparison.
+Uses hybrid ASTs and relational operator mapping to generate graph structures for GMN-based similarity comparison.
 
 ---
 
