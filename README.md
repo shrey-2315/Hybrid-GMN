@@ -12,7 +12,7 @@ This repository combines two powerful modules for advanced SQL understanding and
 | Module               | Purpose                                                               |
 | -------------------- | --------------------------------------------------------------------- |
 | SQL Normalization    | Converts SQL to AST, applies rewriting rules, and computes similarity |
-| SQL Graph Similarity | Converts SQL to hybrid ASTs and computes similarity via GNN           |
+| SQL Graph Similarity | Converts SQL to hybrid ASTs and computes similarity via GMN           |
 
 ---
 
