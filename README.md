@@ -3,7 +3,7 @@
 This repository combines two powerful modules for advanced SQL understanding and transformation:
 
 * **AST Normalization Module** — Normalizes SQL structure using rule-based AST rewrites and tree edit distance.
-* **Graph Matching Network (GMN) Hybrid** — Embeds SQL into hybrid AST graphs and compares them using GNNs.
+* **Graph Matching Network (GMN) Hybrid** — Embeds SQL into hybrid AST graphs and compares them using GMNs.
 
 ---
 
